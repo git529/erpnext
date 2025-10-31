@@ -651,7 +651,7 @@ def get_columns(filters):
 			"fieldname": "account",
 			"fieldtype": "Link",
 			"options": "Account",
-			"width": 180,
+			"width": 280,
 		},
 		{
 			"label": _("Debit ({0})").format(currency),
@@ -702,23 +702,23 @@ def get_columns(filters):
 		]
 
 	columns += [
-		{"label": _("Voucher Type"), "fieldname": "voucher_type", "width": 120},
+		{"label": _("Voucher Type"), "fieldname": "voucher_type", "width": 160},
 		{
 			"label": _("Voucher Subtype"),
 			"fieldname": "voucher_subtype",
 			"fieldtype": "Data",
-			"width": 180,
+			"width": 160,
 		},
 		{
 			"label": _("Voucher No"),
 			"fieldname": "voucher_no",
 			"fieldtype": "Dynamic Link",
 			"options": "voucher_type",
-			"width": 180,
+			"width": 160,
 		},
-		{"label": _("Against Account"), "fieldname": "against", "width": 120},
-		{"label": _("Party Type"), "fieldname": "party_type", "width": 100},
-		{"label": _("Party"), "fieldname": "party", "width": 100},
+		{"label": _("Against Account"), "fieldname": "against", "width": 280},
+		{"label": _("Party Type"), "fieldname": "party_type", "width": 120},
+		{"label": _("Party"), "fieldname": "party", "width": 200},
 	]
 
 	supplier_master_name = frappe.db.get_single_value("Buying Settings", "supp_master_name")
@@ -753,7 +753,7 @@ def get_columns(filters):
 				"fieldname": "against_voucher",
 				"fieldtype": "Dynamic Link",
 				"options": "against_voucher_type",
-				"width": 100,
+				"width": 200,
 			},
 			{"label": _("Supplier Invoice No"), "fieldname": "bill_no", "fieldtype": "Data", "width": 100},
 		]
